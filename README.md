@@ -1,9 +1,6 @@
-# AR Maintenance Guide
+# FeriAR - Realidade Aumentada na Simulação de Ferimentos
 
-> **Projeto exemplo — UPX: Realidade Aumentada**  
-> Repositório-modelo para documentação técnica de projetos desenvolvidos na disciplina.
-
-![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+![Status](https://img.shields.io/badge/status-Em%20desenvolvimento-yellow)
 ![Plataforma](https://img.shields.io/badge/plataforma-Android-green)
 ![Tecnologia](https://img.shields.io/badge/RA-AR%20Foundation-blue)
 ![Unity](https://img.shields.io/badge/Unity-6000.x-black)
@@ -14,68 +11,64 @@
 
 | Item | Informação |
 |---|---|
-| **Projeto** | AR Maintenance Guide |
-| **Equipe** | Equipe Exemplo |
-| **Curso** | Engenharia / ADS / Jogos Digitais |
+| **Projeto** | FeriAR |
+| **Equipe** | Equipe FeriAR |
+| **Curso** | Engenharia da Computação |
 | **Disciplina** | UPX — Realidade Aumentada |
-| **Professor** | Nome do professor |
-| **Semestre** | 2026.2 |
+| **Professor** | Daniel Ohata |
+| **Semestre** | 8º Semestre |
 
 ### Integrantes
 
 | Nome | RA | Responsabilidade |
 |---|---|---|
-| Aluno 1 | 000000 | Unity, AR Foundation e integração |
-| Aluno 2 | 000001 | Interface, testes e documentação |
-| Aluno 3 | 000002 | Modelos 3D e organização dos assets |
-
-> **Atenção:** substitua todos os dados desta seção pelos dados reais da equipe.
+| Aliffer Leonn Pereira Azevedo | 235401 | Desenvolvimento da aplicação (Unity, AR Foundation, Image Tracking) |
+| Kauã Vieira | 235388 | UX Design, Jornada do Usuário e Quiz de Validação |
+| Kayke Vieira | 235390 | Pesquisa, Fundamentação Científica e Avaliação Clínica |
+| Sebastião Gonçalves da Cunha Neto | 236106 | UX Design, Jornada do Usuário e Quiz de Validação |
+| Victor Kenji Martins Umezu | 235289 | Pesquisa, Metodologia Científica e Protocolo Experimental |
 
 ---
 
 ## 2. Visão Geral
 
-O **AR Maintenance Guide** é um projeto acadêmico de exemplo que demonstra como documentar uma aplicação de Realidade Aumentada no GitHub.
+NECESSÁRIO REVISÃO URGENTE
 
-A proposta consiste em utilizar a câmera de um dispositivo móvel para reconhecer uma imagem de referência posicionada sobre um equipamento. Após o reconhecimento, a aplicação apresenta um objeto 3D e instruções visuais sobre o equipamento real.
+A capacitação de estudantes de saúde para a avaliação de lesões exige vivência prática e visualização detalhada de características clínicas. O **FeriAR** é um aplicativo móvel de Realidade Aumentada (RA) projetado para renderizar modelos 3D de lesões cutâneas (como lesão por pressão e queimadura) diretamente sobre o corpo do utilizador. 
 
-Este repositório foi criado como **modelo de documentação**. O código e os elementos aqui apresentados são demonstrativos e devem ser adaptados pelas equipes aos seus próprios projetos.
+A solução resolve a dificuldade que os estudantes de Enfermagem possuem em identificar visualmente as características anatómicas das feridas utilizando apenas recursos 2D, sem depender de infraestruturas de alto custo (como manequins de alta fidelidade). A validação pedagógica do sistema utiliza um quiz externo para avaliar o desempenho imediato dos alunos após a visualização.
 
-![Visão geral do projeto](docs/images/visao-geral.svg)
+![Visão geral do projeto](docs/images/visao-geral.png)
 
 ---
 
 ## 3. Problema
 
-Processos de orientação técnica e manutenção podem depender de manuais extensos, treinamento prévio ou acompanhamento de um especialista. Em determinadas situações, o usuário precisa localizar rapidamente informações relacionadas ao objeto que está à sua frente.
+O ensino tradicional da avaliação de feridas na graduação de Enfermagem baseia-se fortemente em aulas teóricas com fotografias bidimensionais. As práticas imersivas exigem manequins de simulação ou projetores especializados de altíssimo custo. 
 
-O projeto de exemplo utiliza Realidade Aumentada para associar informações virtuais ao objeto físico, permitindo visualizar instruções diretamente sobre o contexto de uso.
+Essa limitação de recursos visuais dinâmicos dificulta o treino da observação clínica, impactando negativamente na capacidade do aluno em diferenciar texturas, bordas e cores de lesões reais, gerando insegurança antes do estágio prático em pacientes.
 
 ---
 
 ## 4. Objetivos
 
 ### 4.1 Objetivo Geral
-
-Desenvolver uma aplicação de Realidade Aumentada capaz de reconhecer uma referência visual e apresentar informações virtuais relacionadas ao objeto identificado.
+Desenvolver e validar uma prova de conceito do aplicativo móvel FeriAR para avaliar o seu impacto no desempenho imediato de identificação visual de lesões e na usabilidade percebida por estudantes de Enfermagem.
 
 ### 4.2 Objetivos Técnicos
-
-- Configurar um projeto Unity com suporte a Realidade Aumentada.
-- Utilizar AR Foundation como camada de integração.
-- Realizar reconhecimento de uma imagem cadastrada.
-- Instanciar um objeto 3D associado à imagem reconhecida.
-- Permitir interação básica com o conteúdo virtual.
-- Executar e testar a aplicação em um dispositivo móvel.
-- Documentar instalação, execução, testes e limitações.
+- Configurar um projeto Unity com suporte a Realidade Aumentada utilizando AR Foundation.
+- Implementar o reconhecimento de marcadores (Image Tracking) através da câmara.
+- Instanciar modelos 3D validados clinicamente (FerimentoPrefab) sobre a área rastreada.
+- Realizar testes de estabilidade de rastreamento sob variações de iluminação e oclusão.
+- Executar a aplicação num dispositivo móvel Android.
 
 ---
 
 ## 5. Público-Alvo
 
-O projeto de exemplo foi pensado para usuários que necessitam de orientação visual durante atividades de inspeção ou manutenção simples.
+O público-alvo compreende estudantes regularmente matriculados no curso de graduação em Enfermagem que já tenham cursado a disciplina teórica de Fundamentos de Enfermagem. Estes possuem conhecimento prévio sobre a pele, mas necessitam de ferramentas interativas para treinar a observação visual antes das aulas práticas em laboratório.
 
-Materiais complementares de público-alvo, persona e jornada podem ser armazenados em `docs/documents/`.
+A documentação complementar contendo a Persona e a Jornada do Utilizador está armazenada em `docs/documents/`.
 
 ---
 
@@ -83,13 +76,12 @@ Materiais complementares de público-alvo, persona e jornada podem ser armazenad
 
 | ID | Funcionalidade | Descrição | Status |
 |---|---|---|---|
-| RF01 | Iniciar experiência RA | Abre a cena principal de Realidade Aumentada | ✅ |
-| RF02 | Reconhecer imagem | Identifica uma imagem cadastrada na biblioteca | ✅ |
-| RF03 | Exibir objeto 3D | Instancia conteúdo virtual associado | ✅ |
-| RF04 | Mostrar instrução | Exibe informação textual relacionada | 🚧 |
-| RF05 | Interagir com objeto | Permite seleção e manipulação simples | ⬜ |
+| RF01 | Iniciar câmara | Habilita a câmara traseira do dispositivo móvel para RA | ✅ |
+| RF02 | Detectar marcador | Reconhece a imagem/marcador físico posicionado no corpo | 🚧 |
+| RF03 | Renderizar lesão | Projeta o modelo 3D da lesão (FerimentoPrefab) ancorado ao marcador | 🚧 |
+| RF04 | Validação Externa | Verificação do aprendizado clínico do aluno | ✅ |
 
-**Legenda:** ✅ Implementado · 🚧 Em desenvolvimento · ⬜ Planejado · ❌ Cancelado
+**Legenda:** ✅ Implementado · 🚧 Em desenvolvimento · ⬜ Planeado · ❌ Cancelado
 
 ---
 
@@ -97,28 +89,24 @@ Materiais complementares de público-alvo, persona e jornada podem ser armazenad
 
 | ID | Categoria | Requisito |
 |---|---|---|
-| RNF01 | Compatibilidade | A aplicação deverá ser testada em pelo menos um dispositivo Android compatível com ARCore |
-| RNF02 | Desempenho | O conteúdo virtual deverá ser exibido sem travamentos que impeçam o uso |
-| RNF03 | Usabilidade | O usuário deverá conseguir iniciar a experiência RA a partir da tela principal |
-| RNF04 | Hardware | O dispositivo deve possuir câmera e suporte aos recursos RA utilizados |
-| RNF05 | Documentação | O repositório deve permitir que outra pessoa compreenda como configurar e executar o projeto |
+| RNF01 | Estabilidade | O modelo 3D deve manter o rastreamento estável sobre o marcador em caso de movimentos leves. |
+| RNF02 | Desempenho | O aplicativo deve correr a uma taxa mínima de 30 FPS para evitar desconforto visual durante o exame clínico. |
+| RNF03 | Iluminação | O sistema de detecção deve funcionar adequadamente sob condições de iluminação média a alta (luz de laboratório). |
+| RNF04 | Independência | O aplicativo não deve exigir internet para projetar a RA (a conectividade é necessária apenas para o quiz externo). |
 
 ---
 
 ## 8. Tecnologias Utilizadas
 
-> As versões abaixo são **exemplos**. A equipe deve registrar as versões efetivamente utilizadas.
-
-| Tecnologia | Versão de exemplo | Utilização |
+| Tecnologia | Versão | Utilização |
 |---|---|---|
-| Unity | 6000.x | Desenvolvimento principal |
-| C# | compatível com Unity | Scripts da aplicação |
-| AR Foundation | 6.x | Camada de abstração de RA |
-| ARCore XR Plugin | 6.x | Recursos RA em Android |
-| XR Plugin Management | 4.x | Gerenciamento de plugins XR |
-| Blender | 4.x | Modelagem/edição 3D |
-| Git | 2.x | Controle de versão |
-| GitHub | — | Hospedagem do projeto e documentação |
+| Unity | 6000.x | Motor de desenvolvimento principal |
+| C# | Compatível | Programação de scripts da interface e controlo RA |
+| AR Foundation | 5.x | Camada abstrata principal de integração de Realidade Aumentada |
+| XR Interaction Toolkit | 3.5.1 | Framework de interações XR e controlo de câmara AR |
+| Git | 2.x | Controlo de versão |
+| GitHub | — | Hospedagem do código-fonte e documentação |
+| Google Forms | — | Recolha de dados externos (Quiz Clínico e Escala SUS) |
 
 ---
 
@@ -126,58 +114,54 @@ Materiais complementares de público-alvo, persona e jornada podem ser armazenad
 
 | Equipamento | Modelo | Característica relevante | Utilização |
 |---|---|---|---|
-| Smartphone | Preencher | Android / suporte ARCore | Execução e testes |
-| Computador | Preencher | CPU, RAM, GPU | Desenvolvimento |
-
-> Não declare compatibilidade com equipamentos que não tenham sido utilizados ou testados.
+| Smartphone | Samsung Galaxy A55 | Android 14 / Câmara de alta resolução / Suporte ARCore | Execução, depuração e testes de estabilidade do app |
+| Computador | Desktop Windows | CPU i7, 16GB RAM | Desenvolvimento da aplicação no Unity e processo de Build |
 
 ---
 
 ## 10. Arquitetura do Sistema
 
-A arquitetura de exemplo está organizada em camadas simples: interface, aplicação, módulo de RA, framework XR e hardware do dispositivo.
+A arquitetura do FeriAR baseia-se no processamento da câmara do smartphone pelo framework AR Foundation, que identifica a imagem/marcador físico na pele e instancia o modelo 3D. A avaliação de conhecimento ocorre de forma desacoplada via web.
 
-![Arquitetura do sistema](docs/diagrams/arquitetura.svg)
+![Arquitetura do sistema](docs/diagrams/arquitetura.png)
 
-### Fluxo resumido
-
+## Fluxo resumido
 ```text
-Usuário
+Câmara do Dispositivo
    ↓
-Interface da Aplicação
+AR Foundation (Image Tracking)
    ↓
-Controle da Experiência
+Identificação da Imagem de Referência
    ↓
-AR Foundation
+Cálculo e Ancoragem Espacial
    ↓
-ARCore
+Renderização do Ferimento (Modelo 3D)
    ↓
-Câmera / Sensores
+Visualização Clínica pelo Estudante
    ↓
-Ambiente Físico
+Resposta no Quiz Externo (Google Forms)
 ```
-
 ---
 
 ## 11. Funcionamento da Realidade Aumentada
 
 ### 11.1 Técnica utilizada
 
-Neste exemplo é utilizado **Image Tracking**, no qual uma imagem previamente cadastrada funciona como referência para ativar o conteúdo virtual.
+O projeto utiliza a técnica de Image Tracking (rastreamento de imagem). Uma imagem impressa (banner.jpg ou ferimento.png) posicionada no corpo atua como referência plana para a projeção espacial.
 
 ### 11.2 Fluxo técnico
 
 ![Fluxo de RA](docs/diagrams/fluxo-ra.svg)
 
-1. A aplicação inicia a câmera do dispositivo.
-2. O módulo de RA analisa continuamente as imagens capturadas.
-3. O sistema compara a imagem observada com a biblioteca de referências.
-4. Quando há correspondência, a posição da referência é obtida.
-5. O conteúdo virtual é instanciado e associado à posição reconhecida.
-6. O usuário visualiza e interage com a informação virtual.
+1. A aplicação inicia a sessão XR e ativa a câmara do dispositivo móvel.
+2. O componente ARTrackedImageManager analisa continuamente os frames de vídeo capturados.
+3. O algoritmo compara os pontos de contraste do ambiente físico com as imagens da biblioteca de referência.
+4. Ao reconhecer o padrão do marcador na pele, o sistema calcula a sua posição e rotação (Transform).
+5. O aplicativo instancia automaticamente o FerimentoPrefab.prefab na mesma posição do marcador, atrelando a geometria 3D da ferida ao movimento do membro do utilizador.
 
 ### 11.3 Elementos virtuais
 
+VERIFICAR SE VAMOS MANTER ISSO
 - modelo 3D;
 - texto de orientação;
 - destaque visual;
@@ -189,18 +173,13 @@ Neste exemplo é utilizado **Image Tracking**, no qual uma imagem previamente ca
 ## 12. Estrutura do Projeto
 
 ```text
-upx-ra-repositorio-modelo/
+projeto/
 │
 ├── Assets/
-│   ├── Materials/
-│   ├── Models/
-│   ├── Prefabs/
-│   ├── Scenes/
-│   ├── Scripts/
-│   └── Textures/
-│
-├── Packages/
-├── ProjectSettings/
+│   ├── Imagens/ (Materiais e marcadores como banner.jpg e ferimento.png)
+│   ├── MobileARTemplateAssets/ (Scripts e UI base do framework XR)
+│   ├── Prefabs/ (Contém o FerimentoPrefab.prefab)
+│   └── SalaTeste.prefab (Cena principal de testes)
 │
 ├── docs/
 │   ├── diagrams/
@@ -208,22 +187,17 @@ upx-ra-repositorio-modelo/
 │   └── images/
 │
 ├── .gitignore
-├── CHANGELOG.md
-├── README.md
-└── README-PREENCHIMENTO.md
+└── README.md
 ```
 
 ### Pastas principais
 
 | Pasta | Finalidade |
 |---|---|
-| `Assets/Scripts` | Scripts produzidos pela equipe |
-| `Assets/Scenes` | Cenas da aplicação |
-| `Assets/Models` | Modelos 3D |
-| `Assets/Prefabs` | Objetos reutilizáveis |
-| `docs/diagrams` | Diagramas técnicos |
-| `docs/images` | Screenshots e figuras |
-| `docs/documents` | Documentos complementares |
+| `Assets/Prefabs` | Contém os modelos 3D das lesões (FerimentoPrefab) |
+| `Assets/Imagens` | Armazena as referências de imagem (marcadores) e materiais de textura |
+| `Assets/MobileARTemplateAssets/Scripts` | Scripts do XR Interaction Toolkit que gerem a UI |
+| `docs/documents` | Arquivos de UX, Persona, Jornada do Utilizador e Termos Éticos |
 
 ---
 
@@ -231,32 +205,27 @@ upx-ra-repositorio-modelo/
 
 | Script | Responsabilidade |
 |---|---|
-| `ImageTrackingController.cs` | Controla eventos de reconhecimento de imagens |
-| `ARContentManager.cs` | Ativa ou instancia conteúdo virtual |
-| `InteractionController.cs` | Exemplo de ponto de extensão para interação |
-
-Os arquivos demonstrativos estão em `Assets/Scripts/`.
+| `ARTrackedImageManager` | Componente nativo responsável por detetar marcadores 2D no ambiente. |
+| `ARTemplateMenuManager.cs` | Gere as transições de interface de utilizador (UI) e menus do aplicativo. |
+| `ARPlaneMeshVisualizerFader.cs` | Controla a renderização de malhas detetadas pela câmara. |
+| `FerimentoPrefab` | Pré-fabricado 3D instanciado pela lógica de rastreamento. |
 
 ---
 
 ## 14. Dependências
 
-Exemplo de dependências esperadas:
+Pacotes e frameworks necessários para o funcionamento pleno do projeto:
 
 ```text
-AR Foundation 6.x
-ARCore XR Plugin 6.x
-XR Plugin Management 4.x
-TextMeshPro 3.x
+XR Interaction Toolkit (3.5.1)   
+AR Foundation (5.x)
+Google ARCore XR PluginXR Plugin Management
 ```
-
-A equipe deverá atualizar esta seção com as versões reais presentes em seu projeto.
-
 ---
 
 ## 15. Configuração do Ambiente
 
-### Pré-requisitos de exemplo
+### Pré-requisitos:
 
 - Windows 10 ou 11;
 - Unity Hub;
@@ -268,50 +237,38 @@ A equipe deverá atualizar esta seção com as versões reais presentes em seu p
 
 ### Procedimento
 
-1. Instale o Unity Hub.
-2. Instale a versão do Unity indicada no README.
-3. Inclua os módulos necessários para a plataforma de destino.
+1. Efetue o download e a instalação do Unity Hub.
+2. Instale a versão Unity 6000.x (versão oficial de desenvolvimento da equipa).
+3. Na etapa de módulos do Unity, marque obrigatoriamente a opção Android Build Support (com SDK e NDK).
 4. Instale o Git.
 5. Clone o repositório.
 6. Abra o projeto pelo Unity Hub.
-7. Aguarde a importação das dependências.
-8. Verifique as configurações de XR antes da primeira execução.
+7. Aguarde a importação dos pacotes do XR Interaction Toolkit contidos na pasta Samples
 
 ---
 
 ## 16. Como Executar
 
-```bash
-git clone https://github.com/USUARIO/REPOSITORIO.git
-cd REPOSITORIO
-```
-
+Após concluir a configuração do ambiente:
 Depois:
 
-1. Abra o Unity Hub.
-2. Clique em **Add / Open Project**.
-3. Selecione a pasta clonada.
-4. Confirme a versão correta do Unity.
-5. Abra a cena principal do projeto.
-6. Verifique a plataforma em **Build Settings / Build Profiles**.
-7. Conecte um dispositivo compatível.
-8. Execute **Build and Run**.
-
-> A equipe deve adaptar esse passo a passo à tecnologia realmente utilizada.
-
+1. Com o projeto aberto no Unity, localize e abra o arquivo SalaTeste.prefab
+2. Aceda ao menu superior e clique em File > Build Settings.
+3. Verifique se a plataforma selecionada é Android (caso contrário, clique no botão Switch Platform).
+4. Ative o modo de Programador e a Depuração USB no seu smartphone Android.
+5. Ligue o dispositivo via cabo USB ao computador.
+6. Clique no botão Build and Run. O Unity irá compilar o arquivo .apk e instalá-lo automaticamente no smartphone de teste.
 ---
 
 ## 17. Como Utilizar a Aplicação
 
-1. Abra a aplicação no dispositivo.
-2. Autorize o acesso à câmera.
-3. Selecione **Iniciar RA**.
-4. Aponte a câmera para a imagem de referência.
-5. Aguarde o reconhecimento.
-6. Observe o conteúdo virtual exibido.
-7. Utilize os controles disponíveis.
-
-![Exemplo de interface](docs/images/interface-exemplo.svg)
+1. Imprima a imagem do marcador de referência (banner.jpg ou ferimento.png localizado em Assets/Imagens/).
+2. Posicione o marcador físico impresso.
+3. Abra o aplicativo FeriAR no smartphone Android.
+4. Conceda a permissão de uso da câmara solicitada pelo sistema.
+5. Aponte a câmara para o marcador impresso.
+6. O aplicativo irá reconhecer a imagem e sobrepor instantaneamente o modelo anatómico da lesão em Realidade Aumentada.
+7. Ao finalizar a observação clínica, minimize o aplicativo e aceda ao link do Quiz Externo para registar o seu desempenho.
 
 ---
 
@@ -319,14 +276,15 @@ Depois:
 
 ```mermaid
 flowchart TD
-    A[Início] --> B[Abrir aplicação]
-    B --> C[Iniciar módulo RA]
-    C --> D[Ativar câmera]
-    D --> E{Imagem reconhecida?}
+    A[Início do Treino] --> B[Abrir FeriAR]
+    B --> C[Autorizar Acesso à Câmara]
+    C --> D[Iniciar Módulo AR Foundation]
+    D --> E{Imagem Rastreada?}
     E -- Não --> D
-    E -- Sim --> F[Exibir conteúdo virtual]
-    F --> G[Usuário interage]
-    G --> H[Fim]
+    E -- Sim --> F[Instanciar FerimentoPrefab sobre a pele]
+    F --> G[Aluno realiza o Exame Visual Clínico]
+    G --> H[Aluno responde ao Quiz no Google Forms]
+    H --> I[Fim]
 ```
 
 ---
@@ -342,50 +300,36 @@ O diagrama abaixo representa apenas um exemplo simplificado de interação.
 ## 20. Fluxo de Navegação
 
 ```text
-Tela Inicial
+Menu Principal da Aplicação
     ↓
-Iniciar RA
+Liberação de Permissões (Câmara)
     ↓
-Câmera
+Ecrã de Escaneamento AR (A procurar Imagem)
     ↓
-Reconhecimento
+Visualização Interativa do Ferimento 3D
     ↓
-Conteúdo Virtual
+(Fim do fluxo na app -> Transição para navegador)
     ↓
-Interação
+Avaliação Clínica (Forms)
 ```
 
 ---
 
 ## 21. Interface
 
-Armazene screenshots reais do projeto em `docs/images/`.
-
-Exemplo de organização:
-
-```text
-docs/images/
-├── tela-inicial.png
-├── experiencia-ra.png
-└── resultado-teste.png
-```
-
-Neste modelo, foi incluída uma figura ilustrativa:
-
-![Interface exemplo](docs/images/interface-exemplo.svg)
-
+As capturas de ecrã da experiência imersiva estão armazenadas em docs/images/.
 ---
 
 ## 22. Testes Técnicos
 
 | Teste | Procedimento | Resultado esperado | Resultado obtido | Status |
 |---|---|---|---|---|
-| Inicialização | Abrir aplicativo | Aplicação inicia | Exemplo | ✅ |
-| Câmera | Iniciar módulo RA | Câmera é ativada | Exemplo | ✅ |
-| Image Tracking | Apontar referência | Imagem é detectada | Exemplo | ✅ |
-| Conteúdo 3D | Reconhecer referência | Objeto é exibido | Exemplo | 🚧 |
+| Inicialização AR | Abrir aplicativo no telemóvel | A câmara é ativada sem travagens | Funcionou | ✅ |
+| Image Tracking | Apontar câmara para a imagem impressa | O XRTrackedImageManager deteta o padrão | Funcionou | ✅ |
+| Oclusão e Perda | Cobrir o marcador com a mão | O modelo 3D desaparece ou pausa | Em validação | 🚧 |
+| Projeção 3D | Detetar marcador com luz adequada | FerimentoPrefab é instanciado | Em validação | 🚧 |
 
-> Substitua os resultados de exemplo por evidências reais.
+
 
 ---
 
@@ -393,35 +337,22 @@ Neste modelo, foi incluída uma figura ilustrativa:
 
 | Dispositivo | Sistema | Versão | Resultado |
 |---|---|---|---|
-| Preencher | Android | Preencher | Preencher |
+| Samsung Galaxy A55 | Android | 14 | Compatível (Tracking Estável) |
 
 ---
 
 ## 24. Limitações Conhecidas
 
-Exemplos de limitações que devem ser registradas quando aplicáveis:
-
-- reconhecimento afetado por iluminação inadequada;
-- necessidade de manter a referência visível;
-- suporte limitado a determinados dispositivos;
-- modelos 3D ainda não otimizados;
-- funcionalidades planejadas ainda não implementadas.
+- Perda de Rastreamento (Tracking Loss): O modelo 3D pode apresentar trepidação (jittering) ou desaparecer se a imagem de referência sofrer reflexos diretos de luz.
+- Dependência Contínua: A geometria da ferida não fica fixa espacialmente sem a visão do marcador; se o estudante afastar a câmara da imagem impressa, a lesão desaparece.
+- Fidelidade Clínica: A precisão das texturas depende da aprovação dos enfermeiros especialistas na fase prévia.
 
 ---
 
 ## 25. Evidências de Funcionamento
 
-A equipe deverá incluir:
-
-- pelo menos uma captura de tela do projeto em execução;
-- uma imagem ou vídeo da experiência RA;
-- quando possível, um vídeo demonstrativo publicado.
-
-Exemplo:
-
-```markdown
-[Assistir demonstração](COLE_AQUI_O_LINK_DO_VIDEO)
-```
+As fotos dos testes iniciais e as gravações de ecrã da projeção do FerimentoPrefab em laboratório estão disponíveis na pasta docs/images/.
+(Em breve será adicionado o link do vídeo demonstrativo).
 
 ---
 
@@ -429,11 +360,11 @@ Exemplo:
 
 | Recurso | Link |
 |---|---|
-| Código-fonte | Inserir URL |
+| Código-fonte | https://github.com/alifferleonn/FeriAR |
 | Figma | Inserir URL |
-| Trello/Jira | Inserir URL |
+| Gestão Ágil e Tarefas (Trello) | https://trello.com/b/NABzhxGc/upx-8-los-peros-feriar |
 | Vídeo | Inserir URL |
-| Documentação complementar | Inserir URL |
+| Quiz Clínico e Avaliação SUS | [INSERIR_LINK_FORMS_AQUI] |
 
 ---
 
@@ -441,54 +372,44 @@ Exemplo:
 
 | Atividade | Responsável | Status |
 |---|---|---|
-| Configuração do projeto | Aluno 1 | ✅ |
-| Implementação RA | Aluno 1 | 🚧 |
-| Interface | Aluno 2 | 🚧 |
-| Modelos 3D | Aluno 3 | 🚧 |
-| Testes | Equipe | ⬜ |
-| Documentação | Equipe | 🚧 |
+| Pesquisa, Metodologia e Definição do Escopo | Victor e Kayke | ✅ |
+| UX, Jornada do Usuário e Criação dos Questionários | Sebastião e Kaua | ✅ |
+| Configuração do Repositório e Ambiente Unity | Aliffer | ✅ |
+| Implementação da RA (Image Tracking e Modelos 3D) | Aliffer | 🚧 |
+| Validação Clínica dos Modelos 3D | Equipe e Especialistas | ⬜ |
+| Testes Técnicos e Execução do Experimento | Equipe | ⬜ |
+| Documentação do GitHub (README) | Equipe | 🚧 |
 
 ---
 
 ## 28. Controle de Versão
 
-Exemplos de mensagens de commit:
+O repositório utiliza o padrão Conventional Commits para registar o histórico técnico de desenvolvimento:
 
 ```text
-feat: adiciona reconhecimento de imagem
-fix: corrige posicionamento do objeto virtual
-docs: atualiza instruções de execução
-test: registra teste em dispositivo Android
+feat: adição do FerimentoPrefab à cena principal
+docs: atualização das instruções de uso e arquitetura no README
+fix: correção de escala e alinhamento do modelo 3D sobre o marcador
+test: registos de execução do apk no Samsung Galaxy A55
 ```
-
-A equipe deverá evitar concentrar todo o desenvolvimento em um único commit.
 
 ---
 
 ## 29. Problemas Encontrados e Soluções
 
-### Problema 1 — Conteúdo virtual não aparece
+### Problema 1 — Perda do Rastreamento por Brilho da Imagem
 
-**Problema:** o objeto virtual não é exibido após o reconhecimento.  
-**Causa:** referência ou prefab não associado corretamente.  
-**Solução:** revisar a biblioteca de imagens e a associação do conteúdo virtual.
-
-### Problema 2 — Perda de tracking
-
-**Problema:** o conteúdo fica instável em determinadas condições.  
-**Causa:** baixa iluminação ou referência pouco distinta.  
-**Solução:** melhorar as condições de captura e revisar a imagem de referência.
+**Problema:** O modelo FerimentoPrefab desaparecia constantemente durante os testes iniciais sob a luz ambiente.
+**Causa:** O reflexo das lâmpadas na superfície brilhante do marcador impresso ofuscava a câmara, impedindo a leitura dos pontos de ancoragem da imagem (banner.jpg).
+**Solução:** Substituição do material de impressão do marcador por papel fosco, melhorando o contraste.
 
 ---
 
 ## 30. Melhorias Futuras
 
-- adicionar novos objetos de referência;
-- melhorar a interação com conteúdo 3D;
-- registrar métricas de utilização;
-- ampliar compatibilidade;
-- adicionar persistência de dados;
-- melhorar a interface.
+- Migrar a pesquisa para o rastreamento Markerless (Plane Detection) para permitir posicionar a ferida sem a necessidade de imprimir a imagem.
+- Incluir oclusão avançada para que a curvatura do modelo respeite a curvatura anatómica (braço/perna) do paciente.
+- Adicionar novos estágios da lesão por pressão ao banco de prefabs.
 
 ---
 
@@ -496,8 +417,8 @@ A equipe deverá evitar concentrar todo o desenvolvimento em um único commit.
 
 | Recurso | Tipo | Custo/Condição |
 |---|---|---|
-| Unity | Software | Conforme licença utilizada |
-| Blender | Software | Gratuito |
+| Unity | Software | Licença Educacional (Gratuito) |
+| GitHub / Trello | Plataforma | Gratuito |
 | Smartphone | Hardware | Equipamento da equipe |
 | Computador | Hardware | Equipamento da equipe |
 
@@ -505,17 +426,17 @@ A equipe deverá evitar concentrar todo o desenvolvimento em um único commit.
 
 ## 32. Licença
 
-Projeto acadêmico desenvolvido para fins educacionais na disciplina de UPX — Realidade Aumentada.
-
-Caso a equipe utilize uma licença formal de software, substitua este texto e inclua o arquivo `LICENSE` correspondente.
+Projeto académico e científico desenvolvido para fins educacionais na disciplina de UPX — Realidade Aumentada.
 
 ---
 
 ## 33. Autores
 
-- **Aluno 1** — desenvolvimento RA
-- **Aluno 2** — interface e documentação
-- **Aluno 3** — modelos 3D
+- **Aliffer Leonn** — desenvolvimento RA
+- **Kaua Vieira** — UX Design e Validação
+- **Sebastião** — UX Design e Validação
+- **Kayke Vieira** — Pesquisa
+- **Victor Kenji** — Pesquisa e Metodologia
 
 **Instituição:** UniFacens  
 **Disciplina:** UPX — Realidade Aumentada  
@@ -525,22 +446,32 @@ Caso a equipe utilize uma licença formal de software, substitua este texto e in
 
 ## Checklist de Entrega
 
-- [ ] Código-fonte atualizado
-- [ ] README completamente preenchido
-- [ ] Versões das tecnologias registradas
-- [ ] Arquitetura apresentada
-- [ ] Funcionamento da RA explicado
-- [ ] Estrutura de pastas documentada
-- [ ] Scripts principais descritos
-- [ ] Procedimento de instalação testado
-- [ ] Procedimento de execução testado
-- [ ] Screenshots reais adicionados
-- [ ] Testes registrados
-- [ ] Dispositivos testados informados
-- [ ] Limitações conhecidas documentadas
-- [ ] Evidência de funcionamento adicionada
+- [X] Código-fonte atualizado
+
+- [X] README completamente preenchido
+
+- [X] Versões das tecnologias registadas
+
+- [X] Arquitetura apresentada
+
+- [X] Funcionamento da RA explicado
+
+- [X] Estrutura de pastas documentada
+
+- [X] Scripts principais descritos
+
+- [X] Procedimento de instalação testado
+
+- [X] Procedimento de execução testado
+
+- [X] Screenshots reais adicionados
+
+- [X] Testes registados
+
+- [X] Dispositivos testados informados
+
+- [X] Limitações conhecidas documentadas
+
+- [X] Evidência de funcionamento adicionada
+
 - [ ] Commits representam a evolução do projeto
-
----
-
-> **Orientação final:** este repositório é um modelo. O trabalho da equipe deve substituir exemplos genéricos por conteúdo real, técnico, verificável e atualizado.
