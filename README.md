@@ -76,7 +76,7 @@ A documentação complementar contendo a Persona e a Jornada do Utilizador está
 
 | ID | Funcionalidade | Descrição | Status |
 |---|---|---|---|
-| RF01 | Iniciar câmara | Habilita a câmara traseira do dispositivo móvel para RA | ✅ |
+| RF01 | Iniciar câmera | Habilita a câmera traseira do dispositivo móvel para RA | ✅ |
 | RF02 | Detectar marcador | Reconhece a imagem/marcador físico posicionado no corpo | 🚧 |
 | RF03 | Renderizar lesão | Projeta o modelo 3D da lesão (FerimentoPrefab) ancorado ao marcador | 🚧 |
 | RF04 | Validação Externa | Verificação do aprendizado clínico do aluno | ✅ |
