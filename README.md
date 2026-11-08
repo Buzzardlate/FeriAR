@@ -32,8 +32,6 @@
 
 ## 2. Visão Geral
 
-NECESSÁRIO REVISÃO URGENTE
-
 A capacitação de estudantes de saúde para a avaliação de lesões exige vivência prática e visualização detalhada de características clínicas. O **FeriAR** é um aplicativo móvel de Realidade Aumentada (RA) projetado para renderizar modelos 3D de lesões cutâneas (como lesão por pressão e queimadura) diretamente sobre o corpo do utilizador. 
 
 A solução resolve a dificuldade que os estudantes de Enfermagem possuem em identificar visualmente as características anatómicas das feridas utilizando apenas recursos 2D, sem depender de infraestruturas de alto custo (como manequins de alta fidelidade). A validação pedagógica do sistema utiliza um quiz externo para avaliar o desempenho imediato dos alunos após a visualização.
